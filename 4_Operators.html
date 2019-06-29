@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Untitled2</title>
+<title>Untitled4</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13113,19 +13113,168 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="PYTHON-TUTORIAL">PYTHON TUTORIAL<a class="anchor-link" href="#PYTHON-TUTORIAL">&#182;</a></h1><p>Topic 1. Strings <a href="https://kush225.github.io/Learning_python/1_Strings.html">https://kush225.github.io/Learning_python/1_Strings.html</a></p>
-<p>Topic 2. List,Tuples,Sets <a href="https://kush225.github.io/Learning_python/2_list_tuple_set.html">https://kush225.github.io/Learning_python/2_list_tuple_set.html</a></p>
-<p>Topic 3. Dictionary <a href="https://kush225.github.io/Learning_python/3_Dictionary.html">https://kush225.github.io/Learning_python/3_Dictionary.html</a></p>
-<p>Topic 4. Operators <a href="https://kush225.github.io/Learning_python/4_Operators.html">https://kush225.github.io/Learning_python/4_Operators.html</a></p>
-<p>Topic 5. For Loop <a href="https://kush225.github.io/Learning_python/5_For_Loop.html">https://kush225.github.io/Learning_python/5_For_Loop.html</a></p>
-<p>Topic 6. Functions <a href="https://kush225.github.io/Learning_python/6_Functions.html">https://kush225.github.io/Learning_python/6_Functions.html</a></p>
-<p>Topic 7. Slicing <a href="https://kush225.github.io/Learning_python/7_Slicing.html">https://kush225.github.io/Learning_python/7_Slicing.html</a></p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">c</span><span class="o">=</span><span class="n">a</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#checks whether the value of a and b are equal</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#id prints memory address</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>140391548556040
+140391548097928
+140391548556040
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#is checks whether the same object in memory</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#False values</span>
+<span class="c1"># Flase</span>
+<span class="c1"># None</span>
+<span class="c1"># zero of any numeric type</span>
+<span class="c1"># any empty sequence. For example: &#39;&#39;, (), [], {}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
