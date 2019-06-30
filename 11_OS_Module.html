@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Untitled2</title>
+<title>OS_Module</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13113,23 +13113,757 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="PYTHON-TUTORIAL">PYTHON TUTORIAL<a class="anchor-link" href="#PYTHON-TUTORIAL">&#182;</a></h1><p>Topic 1. Strings <a href="https://kush225.github.io/Learning_python/1_Strings.html">https://kush225.github.io/Learning_python/1_Strings.html</a></p>
-<p>Topic 2. List,Tuples,Sets <a href="https://kush225.github.io/Learning_python/2_list_tuple_set.html">https://kush225.github.io/Learning_python/2_list_tuple_set.html</a></p>
-<p>Topic 3. Dictionary <a href="https://kush225.github.io/Learning_python/3_Dictionary.html">https://kush225.github.io/Learning_python/3_Dictionary.html</a></p>
-<p>Topic 4. Operators <a href="https://kush225.github.io/Learning_python/4_Operators.html">https://kush225.github.io/Learning_python/4_Operators.html</a></p>
-<p>Topic 5. For Loop <a href="https://kush225.github.io/Learning_python/5_For_Loop.html">https://kush225.github.io/Learning_python/5_For_Loop.html</a></p>
-<p>Topic 6. Functions <a href="https://kush225.github.io/Learning_python/6_Functions.html">https://kush225.github.io/Learning_python/6_Functions.html</a></p>
-<p>Topic 7. Slicing <a href="https://kush225.github.io/Learning_python/7_Slicing.html">https://kush225.github.io/Learning_python/7_Slicing.html</a></p>
-<p>Topic 8. Comprehensions of List, Dictionary and sets <a href="https://kush225.github.io/Learning_python/8_Comprehensions.html">https://kush225.github.io/Learning_python/8_Comprehensions.html</a></p>
-<p>Topic 9. Sorting <a href="https://kush225.github.io/Learning_python/9_sorting.html">https://kush225.github.io/Learning_python/9_sorting.html</a></p>
-<p>Topic 10. String Formatting <a href="https://kush225.github.io/Learning_python/10_String_Formatting.html">https://kush225.github.io/Learning_python/10_String_Formatting.html</a></p>
-<p>Topic 11. OS Module <a href="https://kush225.github.io/Learning_python/11_OS_Module.html">https://kush225.github.io/Learning_python/11_OS_Module.html</a></p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#All the options in os module</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">os</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;CLD_CONTINUED&#39;, &#39;CLD_DUMPED&#39;, &#39;CLD_EXITED&#39;, &#39;CLD_TRAPPED&#39;, &#39;DirEntry&#39;, &#39;EX_CANTCREAT&#39;, &#39;EX_CONFIG&#39;, &#39;EX_DATAERR&#39;, &#39;EX_IOERR&#39;, &#39;EX_NOHOST&#39;, &#39;EX_NOINPUT&#39;, &#39;EX_NOPERM&#39;, &#39;EX_NOUSER&#39;, &#39;EX_OK&#39;, &#39;EX_OSERR&#39;, &#39;EX_OSFILE&#39;, &#39;EX_PROTOCOL&#39;, &#39;EX_SOFTWARE&#39;, &#39;EX_TEMPFAIL&#39;, &#39;EX_UNAVAILABLE&#39;, &#39;EX_USAGE&#39;, &#39;F_LOCK&#39;, &#39;F_OK&#39;, &#39;F_TEST&#39;, &#39;F_TLOCK&#39;, &#39;F_ULOCK&#39;, &#39;MutableMapping&#39;, &#39;NGROUPS_MAX&#39;, &#39;O_ACCMODE&#39;, &#39;O_APPEND&#39;, &#39;O_ASYNC&#39;, &#39;O_CLOEXEC&#39;, &#39;O_CREAT&#39;, &#39;O_DIRECT&#39;, &#39;O_DIRECTORY&#39;, &#39;O_DSYNC&#39;, &#39;O_EXCL&#39;, &#39;O_LARGEFILE&#39;, &#39;O_NDELAY&#39;, &#39;O_NOATIME&#39;, &#39;O_NOCTTY&#39;, &#39;O_NOFOLLOW&#39;, &#39;O_NONBLOCK&#39;, &#39;O_RDONLY&#39;, &#39;O_RDWR&#39;, &#39;O_RSYNC&#39;, &#39;O_SYNC&#39;, &#39;O_TRUNC&#39;, &#39;O_WRONLY&#39;, &#39;POSIX_FADV_DONTNEED&#39;, &#39;POSIX_FADV_NOREUSE&#39;, &#39;POSIX_FADV_NORMAL&#39;, &#39;POSIX_FADV_RANDOM&#39;, &#39;POSIX_FADV_SEQUENTIAL&#39;, &#39;POSIX_FADV_WILLNEED&#39;, &#39;PRIO_PGRP&#39;, &#39;PRIO_PROCESS&#39;, &#39;PRIO_USER&#39;, &#39;P_ALL&#39;, &#39;P_NOWAIT&#39;, &#39;P_NOWAITO&#39;, &#39;P_PGID&#39;, &#39;P_PID&#39;, &#39;P_WAIT&#39;, &#39;PathLike&#39;, &#39;RTLD_DEEPBIND&#39;, &#39;RTLD_GLOBAL&#39;, &#39;RTLD_LAZY&#39;, &#39;RTLD_LOCAL&#39;, &#39;RTLD_NODELETE&#39;, &#39;RTLD_NOLOAD&#39;, &#39;RTLD_NOW&#39;, &#39;R_OK&#39;, &#39;SCHED_BATCH&#39;, &#39;SCHED_FIFO&#39;, &#39;SCHED_IDLE&#39;, &#39;SCHED_OTHER&#39;, &#39;SCHED_RESET_ON_FORK&#39;, &#39;SCHED_RR&#39;, &#39;SEEK_CUR&#39;, &#39;SEEK_END&#39;, &#39;SEEK_SET&#39;, &#39;ST_APPEND&#39;, &#39;ST_MANDLOCK&#39;, &#39;ST_NOATIME&#39;, &#39;ST_NODEV&#39;, &#39;ST_NODIRATIME&#39;, &#39;ST_NOEXEC&#39;, &#39;ST_NOSUID&#39;, &#39;ST_RDONLY&#39;, &#39;ST_RELATIME&#39;, &#39;ST_SYNCHRONOUS&#39;, &#39;ST_WRITE&#39;, &#39;TMP_MAX&#39;, &#39;WCONTINUED&#39;, &#39;WCOREDUMP&#39;, &#39;WEXITED&#39;, &#39;WEXITSTATUS&#39;, &#39;WIFCONTINUED&#39;, &#39;WIFEXITED&#39;, &#39;WIFSIGNALED&#39;, &#39;WIFSTOPPED&#39;, &#39;WNOHANG&#39;, &#39;WNOWAIT&#39;, &#39;WSTOPPED&#39;, &#39;WSTOPSIG&#39;, &#39;WTERMSIG&#39;, &#39;WUNTRACED&#39;, &#39;W_OK&#39;, &#39;XATTR_CREATE&#39;, &#39;XATTR_REPLACE&#39;, &#39;XATTR_SIZE_MAX&#39;, &#39;X_OK&#39;, &#39;_Environ&#39;, &#39;__all__&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;_execvpe&#39;, &#39;_exists&#39;, &#39;_exit&#39;, &#39;_fspath&#39;, &#39;_fwalk&#39;, &#39;_get_exports_list&#39;, &#39;_putenv&#39;, &#39;_spawnvef&#39;, &#39;_unsetenv&#39;, &#39;_wrap_close&#39;, &#39;abc&#39;, &#39;abort&#39;, &#39;access&#39;, &#39;altsep&#39;, &#39;chdir&#39;, &#39;chmod&#39;, &#39;chown&#39;, &#39;chroot&#39;, &#39;close&#39;, &#39;closerange&#39;, &#39;confstr&#39;, &#39;confstr_names&#39;, &#39;cpu_count&#39;, &#39;ctermid&#39;, &#39;curdir&#39;, &#39;defpath&#39;, &#39;device_encoding&#39;, &#39;devnull&#39;, &#39;dup&#39;, &#39;dup2&#39;, &#39;environ&#39;, &#39;environb&#39;, &#39;error&#39;, &#39;execl&#39;, &#39;execle&#39;, &#39;execlp&#39;, &#39;execlpe&#39;, &#39;execv&#39;, &#39;execve&#39;, &#39;execvp&#39;, &#39;execvpe&#39;, &#39;extsep&#39;, &#39;fchdir&#39;, &#39;fchmod&#39;, &#39;fchown&#39;, &#39;fdatasync&#39;, &#39;fdopen&#39;, &#39;fork&#39;, &#39;forkpty&#39;, &#39;fpathconf&#39;, &#39;fsdecode&#39;, &#39;fsencode&#39;, &#39;fspath&#39;, &#39;fstat&#39;, &#39;fstatvfs&#39;, &#39;fsync&#39;, &#39;ftruncate&#39;, &#39;fwalk&#39;, &#39;get_blocking&#39;, &#39;get_exec_path&#39;, &#39;get_inheritable&#39;, &#39;get_terminal_size&#39;, &#39;getcwd&#39;, &#39;getcwdb&#39;, &#39;getegid&#39;, &#39;getenv&#39;, &#39;getenvb&#39;, &#39;geteuid&#39;, &#39;getgid&#39;, &#39;getgrouplist&#39;, &#39;getgroups&#39;, &#39;getloadavg&#39;, &#39;getlogin&#39;, &#39;getpgid&#39;, &#39;getpgrp&#39;, &#39;getpid&#39;, &#39;getppid&#39;, &#39;getpriority&#39;, &#39;getresgid&#39;, &#39;getresuid&#39;, &#39;getsid&#39;, &#39;getuid&#39;, &#39;getxattr&#39;, &#39;initgroups&#39;, &#39;isatty&#39;, &#39;kill&#39;, &#39;killpg&#39;, &#39;lchown&#39;, &#39;linesep&#39;, &#39;link&#39;, &#39;listdir&#39;, &#39;listxattr&#39;, &#39;lockf&#39;, &#39;lseek&#39;, &#39;lstat&#39;, &#39;major&#39;, &#39;makedev&#39;, &#39;makedirs&#39;, &#39;minor&#39;, &#39;mkdir&#39;, &#39;mkfifo&#39;, &#39;mknod&#39;, &#39;name&#39;, &#39;nice&#39;, &#39;open&#39;, &#39;openpty&#39;, &#39;pardir&#39;, &#39;path&#39;, &#39;pathconf&#39;, &#39;pathconf_names&#39;, &#39;pathsep&#39;, &#39;pipe&#39;, &#39;pipe2&#39;, &#39;popen&#39;, &#39;posix_fadvise&#39;, &#39;posix_fallocate&#39;, &#39;pread&#39;, &#39;preadv&#39;, &#39;putenv&#39;, &#39;pwrite&#39;, &#39;pwritev&#39;, &#39;read&#39;, &#39;readlink&#39;, &#39;readv&#39;, &#39;register_at_fork&#39;, &#39;remove&#39;, &#39;removedirs&#39;, &#39;removexattr&#39;, &#39;rename&#39;, &#39;renames&#39;, &#39;replace&#39;, &#39;rmdir&#39;, &#39;scandir&#39;, &#39;sched_get_priority_max&#39;, &#39;sched_get_priority_min&#39;, &#39;sched_getaffinity&#39;, &#39;sched_getparam&#39;, &#39;sched_getscheduler&#39;, &#39;sched_param&#39;, &#39;sched_rr_get_interval&#39;, &#39;sched_setaffinity&#39;, &#39;sched_setparam&#39;, &#39;sched_setscheduler&#39;, &#39;sched_yield&#39;, &#39;sendfile&#39;, &#39;sep&#39;, &#39;set_blocking&#39;, &#39;set_inheritable&#39;, &#39;setegid&#39;, &#39;seteuid&#39;, &#39;setgid&#39;, &#39;setgroups&#39;, &#39;setpgid&#39;, &#39;setpgrp&#39;, &#39;setpriority&#39;, &#39;setregid&#39;, &#39;setresgid&#39;, &#39;setresuid&#39;, &#39;setreuid&#39;, &#39;setsid&#39;, &#39;setuid&#39;, &#39;setxattr&#39;, &#39;spawnl&#39;, &#39;spawnle&#39;, &#39;spawnlp&#39;, &#39;spawnlpe&#39;, &#39;spawnv&#39;, &#39;spawnve&#39;, &#39;spawnvp&#39;, &#39;spawnvpe&#39;, &#39;st&#39;, &#39;stat&#39;, &#39;stat_result&#39;, &#39;statvfs&#39;, &#39;statvfs_result&#39;, &#39;strerror&#39;, &#39;supports_bytes_environ&#39;, &#39;supports_dir_fd&#39;, &#39;supports_effective_ids&#39;, &#39;supports_fd&#39;, &#39;supports_follow_symlinks&#39;, &#39;symlink&#39;, &#39;sync&#39;, &#39;sys&#39;, &#39;sysconf&#39;, &#39;sysconf_names&#39;, &#39;system&#39;, &#39;tcgetpgrp&#39;, &#39;tcsetpgrp&#39;, &#39;terminal_size&#39;, &#39;times&#39;, &#39;times_result&#39;, &#39;truncate&#39;, &#39;ttyname&#39;, &#39;umask&#39;, &#39;uname&#39;, &#39;uname_result&#39;, &#39;unlink&#39;, &#39;unsetenv&#39;, &#39;urandom&#39;, &#39;utime&#39;, &#39;wait&#39;, &#39;wait3&#39;, &#39;wait4&#39;, &#39;waitid&#39;, &#39;waitid_result&#39;, &#39;waitpid&#39;, &#39;walk&#39;, &#39;write&#39;, &#39;writev&#39;]
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Current working Directory</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/home/kushagra/Desktop/GIT-Python
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Changing Current Working Directory</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;/home/kushagra/Documents&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/home/kushagra/Documents
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Listing the files and directories in current Directories</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Software_Testing.docx&#39;, &#39;sushil_kumar_sharma.pdf&#39;, &#39;mysecond.js&#39;, &#39;demofile1.html&#39;, &#39;bzLifecycle.png&#39;, &#39;Assignment&#39;, &#39;Goibibo.pdf&#39;, &#39;Git.txt&#39;, &#39;k8s-mastery&#39;, &#39;101_Ratings&#39;, &#39;docker-curriculum&#39;, &#39;Software_Testing.odt&#39;, &#39;SoftwareTesting2.txt&#39;, &#39;SoftwareTesting.txt&#39;, &#39;buildtesting-sanity.txt&#39;, &#39;download.jpeg&#39;, &#39;personal&#39;, &#39;Kubernetes&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#making Directory, makedirs works similar to mkdir -p option</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;OS-Demo-1&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;OS-Demo-2/a/b/c&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Software_Testing.docx&#39;, &#39;sushil_kumar_sharma.pdf&#39;, &#39;mysecond.js&#39;, &#39;demofile1.html&#39;, &#39;bzLifecycle.png&#39;, &#39;Assignment&#39;, &#39;Goibibo.pdf&#39;, &#39;Git.txt&#39;, &#39;k8s-mastery&#39;, &#39;OS-Demo-2&#39;, &#39;101_Ratings&#39;, &#39;OS-Demo-1&#39;, &#39;docker-curriculum&#39;, &#39;Software_Testing.odt&#39;, &#39;SoftwareTesting2.txt&#39;, &#39;SoftwareTesting.txt&#39;, &#39;buildtesting-sanity.txt&#39;, &#39;download.jpeg&#39;, &#39;personal&#39;, &#39;Kubernetes&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Deleting Directories, removedirs will remove sub directories also</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;OS-Demo-1&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s1">&#39;OS-Demo-2/a/b/c&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Rename file or folder</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;bzLifecycle.png&#39;</span><span class="p">,</span><span class="s1">&#39;bugzlifecycle.png&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Software_Testing.docx&#39;, &#39;sushil_kumar_sharma.pdf&#39;, &#39;mysecond.js&#39;, &#39;demofile1.html&#39;, &#39;Assignment&#39;, &#39;Goibibo.pdf&#39;, &#39;Git.txt&#39;, &#39;k8s-mastery&#39;, &#39;101_Ratings&#39;, &#39;docker-curriculum&#39;, &#39;Software_Testing.odt&#39;, &#39;SoftwareTesting2.txt&#39;, &#39;SoftwareTesting.txt&#39;, &#39;buildtesting-sanity.txt&#39;, &#39;download.jpeg&#39;, &#39;bugzlifecycle.png&#39;, &#39;personal&#39;, &#39;Kubernetes&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#information about file</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="s2">&quot;bugzlifecycle.png&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>os.stat_result(st_mode=33204, st_ino=8951510, st_dev=2050, st_nlink=1, st_uid=30000, st_gid=30000, st_size=74246, st_atime=1559019783, st_mtime=1551016824, st_ctime=1561888070)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Modified time</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="s2">&quot;bugzlifecycle.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1551016824.4557145
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Modified time in Human Readable Format</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="n">mod_time</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="s2">&quot;bugzlifecycle.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">mod_time</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2019-02-24 19:30:24.455714
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">dirfiles</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;/home/kushagra/Desktop/percentile&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current dir:&quot;</span><span class="p">,</span> <span class="n">dirpath</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Directories:&quot;</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Files:&quot;</span><span class="p">,</span> <span class="n">dirfiles</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Current dir: /home/kushagra/Desktop/percentile
+Directories: [&#39;nodeJS&#39;]
+Files: [&#39;percent_line.py&#39;, &#39;percent_try.py&#39;, &#39;percentile_BT.py&#39;, &#39;123&#39;, &#39;new.py&#39;, &#39;yo&#39;, &#39;percent_file.py&#39;, &#39;percentile_interval.py&#39;, &#39;percent_line&#39;, &#39;percentile_aggre.backup.py&#39;, &#39;exp.py&#39;, &#39;percentile_IP.py&#39;, &#39;.try.py.swp&#39;, &#39;3&#39;, &#39;shell.sh&#39;, &#39;kushagra.tar.gz&#39;, &#39;any_percentile.py~&#39;, &#39;2&#39;, &#39;1&#39;, &#39;any_percentile.py&#39;, &#39;backup.py&#39;, &#39;percentile_interval.py.backup&#39;]
+
+Current dir: /home/kushagra/Desktop/percentile/nodeJS
+Directories: []
+Files: [&#39;2.py&#39;, &#39;nodeJS_Percentile.py&#39;, &#39;1&#39;]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Printing Environment Variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HOME&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/home/kushagra
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Joining path and file</span>
+<span class="n">file_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HOME&#39;</span><span class="p">),</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/home/kushagra/test.txt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#To get filename</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="s1">&#39;/home/cavisson/test.txt&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>test.txt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#To get path</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="s1">&#39;/home/cavisson/test.txt&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/home/cavisson
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#To split path and filename</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/home/cavisson/test.txt&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;/home/cavisson&#39;, &#39;test.txt&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#To check whether file exists or not</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;/home/kushagra/test.txt&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;/home/cavisson/test.txt&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Check whether file or not</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&quot;/home/kushagra/test.txt&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Check whether Dir or not</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s2">&quot;/home/kushagra&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Spliting extension</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s1">&#39;/tmp/test.txt&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;/tmp/test&#39;, &#39;.txt&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#options with os.path module</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;__all__&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;_get_sep&#39;, &#39;_joinrealpath&#39;, &#39;_varprog&#39;, &#39;_varprogb&#39;, &#39;abspath&#39;, &#39;altsep&#39;, &#39;basename&#39;, &#39;commonpath&#39;, &#39;commonprefix&#39;, &#39;curdir&#39;, &#39;defpath&#39;, &#39;devnull&#39;, &#39;dirname&#39;, &#39;exists&#39;, &#39;expanduser&#39;, &#39;expandvars&#39;, &#39;extsep&#39;, &#39;genericpath&#39;, &#39;getatime&#39;, &#39;getctime&#39;, &#39;getmtime&#39;, &#39;getsize&#39;, &#39;isabs&#39;, &#39;isdir&#39;, &#39;isfile&#39;, &#39;islink&#39;, &#39;ismount&#39;, &#39;join&#39;, &#39;lexists&#39;, &#39;normcase&#39;, &#39;normpath&#39;, &#39;os&#39;, &#39;pardir&#39;, &#39;pathsep&#39;, &#39;realpath&#39;, &#39;relpath&#39;, &#39;samefile&#39;, &#39;sameopenfile&#39;, &#39;samestat&#39;, &#39;sep&#39;, &#39;split&#39;, &#39;splitdrive&#39;, &#39;splitext&#39;, &#39;stat&#39;, &#39;supports_unicode_filenames&#39;, &#39;sys&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
