@@ -3,7 +3,7 @@
 	<head>
 		<title>Python Tutorial</title>
 <style>
-div#container{
+.container{
         max-width:1200px;
   margin: auto;
         background-color:black;
@@ -13,70 +13,97 @@ div#container{
         right:40px;
         color:white;
         border-radius: 25px;
-  border: 2px solid black; 
-  box-shadow: 5px 10px 8px 10px #888888;
-   background-image: url('logo.png');
-    background-size: 200px 200px;
-    background-repeat: no-repeat;
-    background-position: center;
+ 	border: 2px solid black; 
+ 	box-shadow: 5px 10px 8px 10px #888888;
+  	background-image: url('../Downloads/logo.png');
+   	background-size: 200px 200px;
+   	background-repeat: no-repeat;
+   	background-position: center;
+	animation: mymove 5s infinite;
 }
 
+
+h1 {
+        text-decoration: none;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: Lighter;
+        font-size: 40px;
+        }
+
+
+
+li a {
+	text-decoration: none;
+	color: #fff;
+	font-family: Source Sans Pro;
+	font-weight: Lighter;
+	font-size: 28px;
+	}
+
+.cool-link::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: width .5s;
+	}
+.cool-link:hover::after{
+	width:15%;
+	transition: width .5s;
+	}
 
 </style>
 	
 	</head>
 <body>
-	<div id="container">
-		<center><h1><a href="https://github.com/kush225/Learning_python" style="color:white">Learning Python</a></h1></center>
+	<div class="container">
+		<center><h1><a href="https://github.com/kush225/Learning_python" class="cool-link" style="color:white">Learning Python</a></h1></center>
                 <h2>&ensp;&nbsp; Basics</h2>
 		<font size="4">
                 <ol>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" class="cool-link">Strings</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/2_list_tuple_set.html" style="color:white">List,Tuples,Sets</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/2_list_tuple_set.html" class="cool-link" >List,Tuples,Sets</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/3_Dictionary.html" style="color:white">Dictionary</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/3_Dictionary.html" class="cool-link">Dictionary</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/4_Operators.html" style="color:white">Operators</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/4_Operators.html" class="cool-link">Operators</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/5_For_Loop.html" style="color:white">For Loop</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/5_For_Loop.html" class="cool-link">For Loop</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/6_Functions.html" style="color:white">Functions</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/6_Functions.html" class="cool-link">Functions</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/7_Slicing.html" style="color:white">Slicing</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/7_Slicing.html" class="cool-link">Slicing</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/8_Comprehensions.html" style="color:white">Comprehensions of List, Dictionary and sets</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/8_Comprehensions.html" class="cool-link">Comprehensions of List, Dictionary and sets</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/9_sorting.html" style="color:white">Sorting</a></li>
+			<li> <a href="https://kush225.github.io/Learning_python/9_sorting.html" class="cool-link">Sorting</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/10_String_Formatting.html" style="color:white">String Formatting</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/10_String_Formatting.html" class="cool-link">String Formatting</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/11_OS_Module.html" style="color:white">OS Module</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/11_OS_Module.html" class="cool-link">OS Module</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/12_Datetime_Module.html" style="color:white">Datetime Module</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/12_Datetime_Module.html" class="cool-link">Datetime Module</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/13_File_Objects.html" style="color:white">File Objects</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/13_File_Objects.html" class="cool-link">File Objects</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/14_Random_Module.html" style="color:white">Random Module</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/14_Random_Module.html" class="cool-link">Random Module</a></li>
 
-			<li> <a href="https://kush225.github.io/Learning_python/15_Rename_Multiple_Files.html" style="color:white">Automate Renaming Multiple Files</a></li>
+			<li> <a href="https://kush225.github.io/Learning_python/15_Rename_Multiple_Files.html" class="cool-link">Automate Renaming Multiple Files</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/16_Exception_Handling.html" style="color:white">Exception Handling</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/16_Exception_Handling.html" class="cool-link">Exception Handling</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/17_csv_Module.html" style="color:white">Csv Module</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/17_csv_Module.html" class="cool-link">Csv Module</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/18_LEGB_Rule.html" style="color:white">LEGB Rule</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/18_LEGB_Rule.html" class="cool-link">LEGB Rule</a></li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/19_F-Strings.html" style="color:white">F-Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/20_Generators.html" style="color:white">Generators</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" style="color:white">Strings</a></li>
-                </ol>
+                        <li> <a href="https://kush225.github.io/Learning_python/19_F-Strings.html" class="cool-link">F-Strings</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/20_Generators.html" class="cool-link">Generators</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" class="cool-link">Strings</a></li>
+                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" class="cool-link">Strings</a></li>
+		</ol>
 		</font>
 	</div>
 </body>
