@@ -10,14 +10,15 @@
 #Install these modules using pip beautifulsoup4,request,lxml,request.
 
 
-# In[ ]:
+# In[9]:
 
 
+from bs4 import BeautifulSoup 
 with open('simple.html') as html_file:
     soup= BeautifulSoup(html_file,'lxml') #lxml is parser.
 
 
-# In[25]:
+# In[7]:
 
 
 match = soup.title    #prints the whole title like this "<title>Python Tutorial</title>"
@@ -73,7 +74,7 @@ for article in soup.find_all('div',class_='article'):
     print()
 
 
-# In[38]:
+# In[11]:
 
 
 #Now working with actual website, we will print heading, summary and video links from the website
@@ -81,7 +82,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-# In[124]:
+# In[12]:
 
 
 source = requests.get('http://coreyms.com').text #using requests module we will get text data from webpage.
@@ -89,42 +90,45 @@ soup = BeautifulSoup(source, 'lxml')
 print(soup.prettify())
 
 
-# In[126]:
+# In[15]:
 
 
 article = soup.find('article')
 print(article.prettify())
 
 
-# In[127]:
+# In[16]:
 
 
 headline =article.h2.text
 print(headline)
 
 
-# In[128]:
+# In[17]:
 
 
 summary=article.find('div',class_='entry-content').p.text
 print(summary)
 
 
-# In[129]:
+# In[29]:
 
 
 p_tags = article.find('div',class_='entry-content').find_all('p') #find all the p tags in div_class
 print(p_tags)
 print()
-link=p_tags[1].text.split('/') #split the 2nd p tag with ('/') from list
-print(link)
-link_data= link[-1] #graps the last link item
-print()
-video_link=f'https://youtube.com/watch?v={link_data}' #make your know link from link data
-print(video_link)
+
+iframe = article.find('iframe')
+print(iframe)
+src_iframe = iframe['src']
+print(src_iframe)
+vid_id=src_iframe.split("/")[4].split("?")[0]
+print(vid_id)
+youtube_link = f'https://youtube.com/watch?v={vid_id}'
+print(youtube_link)
 
 
-# In[134]:
+# In[30]:
 
 
 source = requests.get('http://coreyms.com').text
@@ -142,14 +146,10 @@ for article in soup.find_all('article'):
     print("summary: ",summary)
     print()
     
-    p_tags = article.find('div',class_='entry-content').find_all('p')
-    try: 
-        link=p_tags[1].text.split('/')
-    except Exception as e:
-        break
-    else: link_data= link[-1]
-    video_link=f'https://youtube.com/watch?v={link_data}' 
-    print("link: ", video_link)
+    vid_id = article.find('iframe')['src'].split("/")[4].split("?")[0]
+    youtube_link = f'https://youtube.com/watch?v={vid_id}'
+    print(youtube_link)
+    
     print()
     print()
 
