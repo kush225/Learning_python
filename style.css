@@ -18,9 +18,9 @@
         background-position: center;
         animation: mymove 5s infinite;
 }
-
-
-
+h1{
+	text-align:center;
+}
 
 body {
 	background: white;
