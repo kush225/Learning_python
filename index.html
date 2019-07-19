@@ -1,127 +1,88 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<title>Python Tutorial</title>
-<style>
-.container{
-        max-width:1200px;
-  margin: auto;
-        background-color:black;
-        position:absolute;
-        top:40px;
-        left:40px;
-        right:40px;
-        color:white;
-        border-radius: 25px;
- 	border: 2px solid black; 
- 	box-shadow: 5px 10px 8px 10px #888888;
-  	background-image: url('../Downloads/logo.png');
-   	background-size: 200px 200px;
-   	background-repeat: no-repeat;
-   	background-position: center;
-	animation: mymove 5s infinite;
-}
-
-
-h1 {
-        text-decoration: none;
-        color: #fff;
-        font-family: sans-serif;
-        font-weight: Lighter;
-        font-size: 40px;
-        }
-
-
-
-li a {
-	text-decoration: none;
-	color: #fff;
-	font-family: Source Sans Pro;
-	font-weight: Lighter;
-	font-size: 28px;
-	}
-
-.cool-link::after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 2px;
-	background: #fff;
-	transition: width .5s;
-	}
-.cool-link:hover::after{
-	width:15%;
-	transition: width .5s;
-	}
-
-</style>
-	
-	</head>
-<body>
+	<link href='style.css' rel='stylesheet'>
 	<div class="container">
-		<center><h1><a href="https://github.com/kush225/Learning_python" class="cool-link" style="color:white">Learning Python</a></h1></center>
-                <h2>&ensp;&nbsp; Basics</h2>
-		<font size="4">
-                <ol>
-                        <li> <a href="https://kush225.github.io/Learning_python/1_Strings.html" class="cool-link">Strings</a></li>
+	<ul>
+		<li><a class="cool-link">Basics</a>
+			<ul>
+				<li><a href="1_Strings.html">Strings</a></li>
+				<li><a href="2_list_tuple_set.html">List, Tuples & Sets</a></li>
+				<li><a href="3_Dictionary.html">Dictionary</a></li>
+				<li><a href="4_Operators.html">Operators</a></li>
+				<li><a href="5_For_Loop.html">For Loop</a></li>
+				<li><a href="6_Functions.html">Functions</a></li>
+				<li><a href="7_Slicing.html">Slicing</a></li>
+				<li><a href="9_sorting.html">Sorting</a></li>
+				<li><a href="10_String_Formatting.html">String Formatting</a></li>
+				<li><a href="19_F-Strings.html">F-Strings</a></li>
+				<li><a href="18_LEGB_Rule.html">LEGB Rule</a></li>
+				<li><a href="39__name__=='__main__'.html">if __name__ == '__main__':</a></li>
+			</ul>
+		</li>
+		<li><a class="cool-link">OOP</a>
+                        <ul>
+				<li><a href="25_Classes_and_Instances.html">Classes & Instances</a></li>
+				<li><a href="26_Class_Variables.html">Class Variables</a></li>
+				<li><a href="27_classmethods_staticmethods.html">Classmethods and Staticmethods</a></li>
+				<li><a href="28_Inheritance.html">Inheritance & Subclasses</a></li>
+				<li><a href="29_Special_Methods.html">Special Methods-Dunder/Magic</a></li>
+				<li><a href="31_Property_Decorators.html">Property Decorators- Getters, Setters & Deleters</a></li>
+                        </ul>
+		</li>
+		<li><a class="cool-link">Advance</a>
+                        <ul>
+				<li><a href="8_Comprehensions.html">Comprehension of List, Dictionary & Sets</a></li>
+				<li><a href="13_File_Objects.html">File Objects</a></li>
+				<li><a href="40_Context_Managers.html">Context Managers</a></li>
+				<li><a href="16_Exception_Handling.html">Exception Handling</a></li>
+				<li><a href="24_Named_Tuple.html">Named Tuple</a></li>
+				<li><a href="30_str()_vs_repr().html">_str()_vs_repr()</a></li>
+				<li><a href="34_Else_Clauses_on_Loops.html">Else Clauses on Loops</a></li>
+				<li><a href="20_Generators.html">Generators</a></li>
+				<li><a href="21_First_Class_Function.html">First Class Functions</a></li>
+				<li><a href="22_Closure.html">Closure</a></li>
+				<li><a href="23_Decorators.html">Decorators</a></li>
+				<li><a href="37_Logging_Basics.html">Logging (Basics)</a></li>
+				<li><a href="38_Logging_Advance.html">Logging (Advance)</a></li>
+                        </ul>
+		</li>
+		<li><a class="cool-link">Modules</a>
+                        <ul>
+				<li><a href="11_OS_Module.html">OS Module</a></li>
+				<li><a href="12_Datetime_Module.html">Datetime Module</a></li>
+				<li><a href="14_Random_Module.html">Random Module</a></li>
+				<li><a href="17_csv_Module.html">CSV Module</a></li>
+				<li><a href="33_Requests Module.html">Requests Module</a></li>
+				<li><a href="32_Beautifulsoup_and_Request_Module.html">BeautifulSoup</a></li>
+				<li><a href="36_Requests-HTML_Module.html">Requests-HTML Module</a></li>
+				<li><a href="35_json_Module.html">JSON Module</a></li>
+                        </ul>
+		</li>
+                <li><a class="cool-link">Activity</a>
+                        <ul>
+				<li><a href="15_Rename_Multiple_Files.html">Automate Renaming Multiple Files</a></li>
+                        </ul>
+                </li>
+                <li><a class="cool-link">Flask</a>
+                        <ul>
+                                <li><a>Coming Soon</a></li>
+                        </ul>
+                </li>
+                <li><a class="cool-link">Django</a>
+                        <ul>
+                                <li><a>Coming Soon</a></li>
+                        </ul>
+                </li>
+                <li><a class="cool-link">Matplotlib</a>
+                        <ul>
+                                <li><a>Coming Soon</a></li>
+                        </ul>
+                </li>
+                <li><a class="cool-link">Pandas</a>
+                        <ul>
+                                <li><a>Coming Soon</a></li>
+                        </ul>
+                </li>
 
-                        <li> <a href="https://kush225.github.io/Learning_python/2_list_tuple_set.html" class="cool-link" >List, Tuples and Sets</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/3_Dictionary.html" class="cool-link">Dictionary</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/4_Operators.html" class="cool-link">Operators</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/5_For_Loop.html" class="cool-link">For Loop</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/6_Functions.html" class="cool-link">Functions</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/7_Slicing.html" class="cool-link">Slicing</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/8_Comprehensions.html" class="cool-link">Comprehensions of List, Dictionary and Sets</a></li>
-
-			<li> <a href="https://kush225.github.io/Learning_python/9_sorting.html" class="cool-link">Sorting</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/10_String_Formatting.html" class="cool-link">String Formatting</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/11_OS_Module.html" class="cool-link">OS Module</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/12_Datetime_Module.html" class="cool-link">Datetime Module</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/13_File_Objects.html" class="cool-link">File Objects</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/14_Random_Module.html" class="cool-link">Random Module</a></li>
-
-			<li> <a href="https://kush225.github.io/Learning_python/15_Rename_Multiple_Files.html" class="cool-link">Automate Renaming Multiple Files</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/16_Exception_Handling.html" class="cool-link">Exception Handling</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/17_csv_Module.html" class="cool-link">CSV Module</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/18_LEGB_Rule.html" class="cool-link">LEGB Rule</a></li>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/19_F-Strings.html" class="cool-link">F-Strings</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/20_Generators.html" class="cool-link">Generators</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/21_First_Class_Function.html" class="cool-link">First Class Function</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/22_Closure.html" class="cool-link">Closure</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/23_Decorators.html" class="cool-link">Decorators</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/24_Named_Tuple.html" class="cool-link">Named Tuple</a></li>
-			<li> <h3>&nbsp; Object Oriented Programming</h3> </li>
-			<ol>
-				<li> <a href="https://kush225.github.io/Learning_python/25_Classes_and_Instances.html" class="cool-link">Classes and Instances</a></li>
-				<li> <a href="https://kush225.github.io/Learning_python/26_Class_Variables.html" class="cool-link">Class Variables</a></li>
-				<li> <a href="https://kush225.github.io/Learning_python/27_classmethods_staticmethods.html" class="cool-link">Classmethods and Staticmethods</a></li>
-				<li> <a href="https://kush225.github.io/Learning_python/28_Inheritance.html" class="cool-link">Inheritance and Subclasses</a></li>
-				<li> <a href="https://kush225.github.io/Learning_python/29_Special_Methods.html" class="cool-link">Special Methods-Dunder/Magic</a></li>
-				<li> <a href="https://kush225.github.io/Learning_python/31_Property_Decorators.html" class="cool-link">Property Decorators- Getters, Setters and Deleters</a></li>
-
-			</ol>
-
-                        <li> <a href="https://kush225.github.io/Learning_python/32_Beautifulsoup_and_Request_Module.html" class="cool-link">BeautifulSoup and Request Module</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/33_Requests Module.html" class="cool-link">Request Module</a></li>
-                        <li> <a href="https://kush225.github.io/Learning_python/34_Else_Clauses_on_Loops.html" class="cool-link">Else Clause on Loops</a></li>
-		</ol>
-		</font>
+	</ul>
 	</div>
-</body>
-
-
+</html>
