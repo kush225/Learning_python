@@ -1,6 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[1]:
+
+
+#OPERATORS
+#Operators are used to perform operations on variables and values.
+#Python divides the operators in the following groups:
+# Arithmetic operators
+# Assignment operators
+# Comparison operators
+# Logical operators
+# Identity operators
+# Membership operators
+# Bitwise operators
+
+
 # In[2]:
 
 
@@ -12,6 +27,7 @@ c=a
 # In[3]:
 
 
+#Comparison operators (==)
 #checks whether the value of a and b are equal
 print(a==b)
 
@@ -28,6 +44,7 @@ print(id(c))
 # In[5]:
 
 
+#identity operator (is)
 #is checks whether the same object in memory
 print(a is b)
 
