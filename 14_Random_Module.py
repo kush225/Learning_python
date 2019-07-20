@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
+#random Module
+#Python offers random module that can generate random numbers.
+
+
 # In[1]:
 
 

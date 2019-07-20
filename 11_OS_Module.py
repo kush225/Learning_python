@@ -1,17 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
+
+
+#os Module
+#The OS module in python provides functions for interacting with the operating system.
+#This module provides a portable way of using operating system dependent functionality.
+
+
+# In[3]:
 
 
 import os
 
 
-# In[2]:
+# In[4]:
 
 
-#All the options in os module
-print(dir(os))
+#You can check All the options in os module using dir()
+#print(dir(os))
 
 
 # In[3]:

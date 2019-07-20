@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[22]:
+# In[1]:
 
 
-#Read Mode
-#Module to use underlying os commands
-import subprocess
+#File Objects
+#A file object allows us to use, access and manipulate all the user accessible files. One can read and write any such files. 
 
 
-# In[23]:
+# In[7]:
 
 
-#test.txt is a file containg data, shown using cat command
-subprocess.getoutput("cat test.txt")
+#not a python command.. just to show the file contents
+get_ipython().system('cat test.txt')
 
 
-# In[24]:
+# In[4]:
 
 
 #no path is needed as file is present in same directory otherwise fullpath to file would be given, r represent file is open for reading which is default mode. so if you don't specify it will open in read mode only.
@@ -27,7 +26,7 @@ subprocess.getoutput("cat test.txt")
 f = open('test.txt','r')
 
 
-# In[26]:
+# In[5]:
 
 
 #It will print the name of file
@@ -37,14 +36,14 @@ print(f.name)
 print(f.mode)
 
 
-# In[27]:
+# In[6]:
 
 
 #Closing the file
 f.close()
 
 
-# In[33]:
+# In[8]:
 
 
 #using Context Manager [Benefit is that it will automatically close the file so it will provide memory leak]
@@ -54,7 +53,7 @@ with open('test.txt', 'r') as f:
     print(f_contents)
 
 
-# In[34]:
+# In[9]:
 
 
 #readlines will show lines in the form of list
@@ -63,11 +62,11 @@ with open('test.txt', 'r') as f:
     print(f_contents)
 
 
-# In[37]:
+# In[15]:
 
 
 #readline will display, one line at a time and move cursor to next line and when readline is invoked again then it will print the other line.
-#print by default adds a newline.. that's why end='' is used.
+#print by default adds a newline.. that's why end='' is used so wont't create a new line.
 with open('test.txt', 'r') as f:
     f_contents = f.readline()
     print(f_contents)
@@ -75,15 +74,9 @@ with open('test.txt', 'r') as f:
     f_contents = f.readline()
     print(f_contents, end='')
     
-    f_contents = f.readline()with open('test.txt', 'r') as f:
-    
-    size_to_read=100
-    f_contents=f.read(size_to_read)
-    
-    while (len(f_contents)) > 0:
-        print(f_contents,end='')
-        f_contents=f.read(size_to_read)
+    f_contents = f.readline()
     print(f_contents)
+    
 
 
 # In[40]:
@@ -113,9 +106,9 @@ with open('test.txt', 'r') as f:
 #A better way to use read.
 with open('test.txt', 'r') as f:
     
-    size_to_read=100
+    size_to_read=100 #no of characters to read
     f_contents=f.read(size_to_read)
-    
+    #At every Iteration printing 100 characters
     while (len(f_contents)) > 0:
         print(f_contents,end='')
         f_contents=f.read(size_to_read)
@@ -245,7 +238,6 @@ subprocess.getoutput("cat test_copy.txt")
 
 
 #You can also make a copy using chunks of data by combining the 2 above codes
-
 with open('test.txt', 'r') as rf:
     with open('test_copy.txt', 'w') as wf:
         

@@ -1,39 +1,42 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
+# In[ ]:
 
 
+#Sorting
+#The sort function can be used to sort a list in ascending, descending or user defined order.
+
+
+# In[3]:
+
+
+#list
 my_list=[9,1,8,2,7,3,6,4,5]
 
 
-# In[8]:
+# In[4]:
 
 
 #sorted function returns the sorted list
 sort_list= sorted(my_list)
 
 
-# In[13]:
+# In[5]:
 
 
 print("Sorted List:\t",sort_list)
-
-
-# In[14]:
-
-
 print("Original List:\t", my_list)
 
 
-# In[15]:
+# In[6]:
 
 
 #To sort the original list, you can use sort method. It doesnot returns the list just sort the original one.
 my_list.sort()
 
 
-# In[16]:
+# In[7]:
 
 
 #Original List gets sorted

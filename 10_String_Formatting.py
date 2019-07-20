@@ -4,6 +4,14 @@
 # In[1]:
 
 
+#String Formatting
+#str.format() is one of the string formatting methods in Python3, which allows multiple substitutions and value formatting. This method lets us concatenate elements within a string through positional formatting
+
+
+# In[1]:
+
+
+#Dictionary
 person={'name':'John','age':30}
 
 
@@ -17,7 +25,7 @@ print(sentence)
 # In[12]:
 
 
-#Above code using String Formatting
+#Above code using format method
 sentence='My name is {} and i am {} yrs old.'.format(person['name'],person['age'])
 print(sentence)
 
