@@ -54,8 +54,8 @@
 }
 
 .container .social-links-div  {
-        float:right; 
-	position: relative;
+        float:bottom; 
+	position: absolute;
   	bottom: 0; 
   	right: 0; 
         width: 120px;
